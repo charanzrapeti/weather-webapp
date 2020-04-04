@@ -6,9 +6,9 @@ const path = require("path");
 
 const geocode = require("./copied/geocode");
 const darksky = require("./copied/darksky");
-const directory = path.join(__dirname, "../webserver/frontend");
-const viewpath = path.join(__dirname, "../webserver/templates");
-const partialpath = path.join(__dirname, "../webserver/partials");
+const directory = path.join(__dirname, "/frontend");
+const viewpath = path.join(__dirname, "/templates");
+const partialpath = path.join(__dirname, "/partials");
 console.log(directory);
 const app = express();
 
