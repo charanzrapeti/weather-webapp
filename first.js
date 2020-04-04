@@ -11,7 +11,7 @@ const viewpath = path.join(__dirname, "/templates");
 const partialpath = path.join(__dirname, "/partials");
 console.log(directory);
 const app = express();
-
+const port = process.env.PORT || 3000
 app.set("view engine", "hbs");
 app.set("views", viewpath);
 hbs.registerPartials(partialpath);
@@ -120,6 +120,6 @@ app.get("/home", (req, res) => {
 app.get("*", (req, res) => {
   res.send("Page 404 not found");
 });
-app.listen(3000, () => {
-  console.log("starting the server on port 3000");
+app.listen(port, () => {
+  console.log("starting the server on port" + port);
 });
