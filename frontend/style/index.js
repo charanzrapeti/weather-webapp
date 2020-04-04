@@ -9,7 +9,7 @@ button.addEventListener('click', (e) => {
     let locations = text.value;
     one.textContent='Loading...';
     second.textContent='';
-    fetch('http://localhost:3000/main?address='+locations).then((response) => {
+    fetch('/main?address='+locations).then((response) => {
     response.json().then((data) => {
         if(data.error){
             one.textContent=data.error;
